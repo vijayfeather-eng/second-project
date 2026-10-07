@@ -12,7 +12,7 @@ export default function Home() {
       <div className="login-box">
 
         <h1>Login to Continue</h1>
-        <p>Enter your details to access your account</p>
+        <p>Enter your details to access account</p>
 
         <div className="input-group">
           <label>Email</label>
