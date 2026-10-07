@@ -1,0 +1,442 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Page background */
+.login-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login box */
+.login-box {
+  width: 400px;
+  padding: 35px;
+
+  background: white;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px lightgray;
+}
+
+/* Heading */
+.login-box h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.login-box p {
+  text-align: center;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+/* Email and Password */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  width: 70px;
+  color: black;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #222;
+  background-color: white;
+}
+
+/* Remember and Forgot Password */
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+}
+
+.options a {
+  color: #555;
+  text-decoration: none;
+}
+.options label{
+  color: darkgray;
+}
+
+/* Sign In button */
+button {
+  width: 100%;
+  padding: 12px;
+
+  background: #333;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* Create account */
+.signup {
+  text-align: center;
+  margin-top: 20px;
+
+  color: gray;
+  font-size: 14px;
+}
+
+.signup a {
+  color: blue;
+  text-decoration: underline;
+}
+.input-group input::placeholder {
+  color: darkgray;
+}
+.signup-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.signup-box {
+  width: 420px;
+  max-width: 100%;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.signup-box h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.signup-box p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.signup-input-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.signup-input-group label {
+  width: 75px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.signup-input-group input {
+  flex: 1;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  color: #222;
+  background-color: white;
+}
+
+.signup-input-group input:focus {
+  border-color: #6366f1;
+}
+
+.signup-input-group input::placeholder {
+  color: #94a3b8;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 7px;
+  background: #2e2828;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background: #555;
+}
+
+
+.login-link {
+  text-align: center;
+  margin-top: 22px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   PROFESSIONAL DASHBOARD
+========================= */
+
+.dashboard-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 18px;
+  box-sizing: border-box;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  padding-left: 12px;
+}
+
+.sidebar-logo span {
+  margin-right: 8px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-nav a,
+.sidebar-bottom a {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  background: #2563eb;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+/* Main */
+.dashboard-main {
+  flex: 1;
+  padding: 35px;
+  min-width: 0;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  color: #111827;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.profile strong,
+.profile span {
+  display: block;
+}
+
+.profile strong {
+  color: #111827;
+}
+
+.profile span {
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+/* Dashboard Welcome */
+.dashboard-main > div:first-of-type {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #e5e7eb;
+}
+
+.dashboard-main > div:first-of-type h1 {
+  color: #111827;
+  margin-top: 0;
+}
+
+.dashboard-main > div:first-of-type p {
+  color: #64748b;
+}
+
+/* Cards */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.dashboard-card h2 {
+  margin-top: 0;
+  color: #111827;
+  font-size: 20px;
+}
+
+.dashboard-card p {
+  color: #64748b;
+  margin: 10px 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 20px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-bottom {
+    margin-top: 15px;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+
+
